@@ -1,0 +1,131 @@
+.dashboard {
+    background-color: #00246B;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.app-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.dashboard-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: #374151;
+}
+
+.nav-link span {
+    margin-left: 0.5rem;
+}
+
+.dashboard-profile {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #dc2626;
+}
+
+.logout-btn span {
+    margin-left: 0.5rem;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (min-width: 925px) {
+    .dashboard {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .dashboard-nav {
+        flex-grow: 1;
+    }
+
+    .dashboard-nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 925px) {
+    .dashboard {
+        border-radius: 0;
+    }
+    .dashboard.mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .dashboard.mobile.collapsed {
+        bottom: auto;
+    }
+
+    .dashboard.mobile.collapsed .dashboard-nav,
+    .dashboard.mobile.collapsed .dashboard-profile {
+        display: none;
+    }
+
+    .dashboard-nav ul {
+        flex-direction: column;
+    }
+
+    .dashboard-profile {
+        margin-top: auto;
+    }
+}

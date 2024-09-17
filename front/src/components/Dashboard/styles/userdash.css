@@ -1,0 +1,141 @@
+.userdash {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.edit-profile-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 150px;
+    background-image: url('https://img.freepik.com/free-vector/newspaper-online-template-realistic_98292-7058.jpg?t=st=1726231718~exp=1726235318~hmac=d6e2505a72955dbea0a256c893f3833de2f4294ce361b858c74c96d98f1e0d2b&w=740');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image-events {
+    height: 150px;
+    background-image: url('https://img.freepik.com/free-photo/bright-classy-wedding-table-serving_8353-10179.jpg?t=st=1726318585~exp=1726322185~hmac=34ccdd74e41c96185918397ce6926210605cae26bd74bbfc6d5d3b47e7f6a548&w=740');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.incident-info, .event-info, .contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.incident-info svg, .event-info svg, .contact-info svg {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.incident-type, .event-name, .contact-name {
+    font-weight: bold;
+}
+
+.incident-location, .event-date, .contact-role {
+    font-size: 14px;
+    color: #666;
+}
+
+.incident-time, .event-time, .contact-phone {
+    font-size: 14px;
+    color: #666;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+
+.quick-action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quick-action-btn:hover {
+    background-color: #00246B;
+}
+
+.quick-action-btn svg {
+    margin-bottom: 5px;
+}
+
+.quick-action-btn span {
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .userdash {
+        padding-top: 50px;
+    }
+    .incident-time, .event-time {
+        display: none;
+    }
+
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,46 @@
+.management-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.management-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00246B;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.management h2 {
+    color: black;
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.management {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .management-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,32 @@
+Flask==2.3.2
+Flask-SQLAlchemy==3.0.3
+Flask-Migrate==4.0.4
+Flask-JWT-Extended==4.5.2
+Flask-CORS==4.0.0
+Flask-Mail==0.9.1
+Flask-RESTful==0.3.9
+
+Werkzeug==3.0.0
+# or use mysqlclient if using MySQL
+mysqlclient==2.1.1
+# pymysql as an alternative
+# PyMySQL==1.0.3
+
+python-dotenv==1.0.0  # For loading environment variables
+marshmallow==3.21.1  # For object serialization and deserialization
+marshmallow-sqlalchemy==0.30.0  # For integration with SQLAlchemy models
+
+requests==2.31.0  # For making HTTP requests, if needed
+gunicorn==21.0.1  # If deploying with Gunicorn
+
+# Security dependencies
+bcrypt==4.0.1  # For password hashing
+itsdangerous==2.1.2  # For generating secure tokens
+cryptography==41.0.3  # For advanced cryptography needs
+
+# Optional, if you plan to use Celery for background tasks
+celery==5.4.0
+redis==5.0.0
+
+# Optional, for API documentation generation
+flasgger==0.9.5

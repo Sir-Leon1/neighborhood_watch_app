@@ -1,0 +1,141 @@
+.users-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.users-title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Make the table container scrollable on smaller screens */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+}
+
+.search-box {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-input {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: none; /* No outer border */
+}
+
+.users-table th, .users-table td {
+    border-bottom: 1px solid #ddd; /* Only horizontal borders */
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.users-table th:nth-child(1),
+.users-table td:nth-child(1) {
+    text-align: left;
+    padding: 15px 0 15px 40px;
+}
+
+.users-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.users-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-scrollable {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+}
+
+.users-table th:first-child,
+.users-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: white; /* Ensure background matches the table */
+    z-index: 1; /* Ensure it stays above other elements */
+    min-width: 90px; /* You can adjust the width of the locked column */
+    max-width: 120px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: rgba(0, 217, 255, 0.39);
+    color: black;
+    border-radius: 3px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border-radius: 3px;
+}
+
+/* Responsive adjustments using media queries */
+@media (max-width: 768px) {
+    .users-title {
+        font-size: 20px;
+    }
+
+    .search-input {
+        width: 90%; /* Full width input on smaller screens */
+    }
+
+    .users-table th, .users-table td {
+        padding: 6px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .users-table th, .users-table td {
+        min-width: 90px; /* Adjust the minimum width of scrollable columns */
+    }
+
+    .users-table th:nth-child(1),
+    .users-table td:nth-child(1) {
+        text-align: left;
+        padding: 0 0 0 0;
+    }
+
+    .users-table th:first-child,
+    .users-table td:first-child {
+        width: 90px;
+    }
+
+    .table-scrollable {
+        overflow-x: auto;
+        width: calc(90px + 2 * 90px);
+    }
+
+}
+
+@media (max-width: 576px) {
+    .users-title {
+        font-size: 18px;
+    }
+
+    .users-table th, .users-table td {
+        padding: 4px;
+        font-size: 12px; /* Even smaller font size for very small screens */
+    }
+}

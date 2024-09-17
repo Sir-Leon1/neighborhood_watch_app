@@ -1,0 +1,144 @@
+.admin-dashboard {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background-color: #00246B;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.activity-feed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.chart-container {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 350px;
+}
+
+
+.activity-card {
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.big-number {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: white;
+}
+
+.activity-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.activity-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-content {
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.activity-time {
+    font-size: 0.8em;
+    color: #7A2048;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .admin-dashboard {
+        padding: 40px 20px 20px 20px;
+    }
+    .dashboard-content {
+        flex-direction: column;
+    }
+
+    .activity-feed, .chart-container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .activity-content {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 600px) {
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .activity-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .activity-time {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
