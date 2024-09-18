@@ -2,6 +2,8 @@
 
 The **Neighborhood Watch App** is a full-stack web application designed to enhance community security by enabling residents to report incidents, manage users, and receive real-time notifications of suspicious activities. It serves as a digital platform for communities to stay informed, connected, and vigilant about potential security threats.
 
+![Screenshot of the app](AppScreenshot.png)
+
 ## Table of Contents
 
 1. [Overview](#overview)
