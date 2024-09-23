@@ -11,6 +11,9 @@ from backend.app.models.adminLog import AdminLog
 from backend.app.models.settings import Settings
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker, scoped_session
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path='/home/sir-leon1/Projects/Learning/Web-Dev/neighborhood_watch_app/backend/app/api/.env')
 
 CNC = {"Incident": Incident,
        "User": User,

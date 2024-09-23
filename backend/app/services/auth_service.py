@@ -8,6 +8,7 @@ from flask import current_app
 
 logger = logging.getLogger(__name__)
 
+
 # Todo: Implement the AuthService class
 class AuthService:
 
