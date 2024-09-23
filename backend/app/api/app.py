@@ -15,6 +15,7 @@ from supertokens_python.recipe.session.framework.flask import verify_session
 from supertokens_python.recipe.multitenancy.syncio import list_all_tenants
 from backend.app import config
 from backend.app.api import app_route
+from backend.app.api import auth_routes
 from backend.app.models import storage
 import os
 from dotenv import load_dotenv
@@ -49,6 +50,7 @@ for handler in logger.handlers:
 app.logger.setLevel(logger.level)
 
 app.register_blueprint(app_route)
+app.register_blueprint(auth_routes)
 
 if __name__ == "__main__":
     app.run(host=os.getenv('SS_API_HOST'),

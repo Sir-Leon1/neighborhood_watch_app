@@ -5,6 +5,7 @@ from flask import Blueprint
 
 
 app_route = Blueprint('blueprint', __name__, url_prefix='/api')
+auth_routes = Blueprint('auth_routes', __name__, url_prefix='/auth')
 
 
 from backend.app.api.index import *
