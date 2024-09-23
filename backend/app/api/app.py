@@ -12,7 +12,7 @@ import os
 from dotenv import load_dotenv
 import logging
 
-load_dotenv(dotenv_path='/home/sir-leon1/Projects/Learning/Web-Dev/neighborhood_watch_app/backend/app/api/.env')
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)

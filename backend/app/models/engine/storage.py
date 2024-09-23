@@ -13,7 +13,7 @@ from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker, scoped_session
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path='/home/sir-leon1/Projects/Learning/Web-Dev/neighborhood_watch_app/backend/app/api/.env')
+load_dotenv()
 
 CNC = {"Incident": Incident,
        "User": User,
