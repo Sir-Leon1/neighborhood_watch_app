@@ -7,8 +7,8 @@ import os
 from flask import Flask
 from flask_cors import CORS
 from supertokens_python import (
-get_all_cors_headers,
-init,
+    get_all_cors_headers,
+    init,
 )
 from supertokens_python.framework.flask import Middleware
 from supertokens_python.recipe.session.framework.flask import verify_session

@@ -1,10 +1,13 @@
 import os
+from dotenv import load_dotenv
 
 from supertokens_python.recipe import emailpassword, session, dashboard
 from supertokens_python import (
     InputAppInfo,
     SupertokensConfig,
 )
+
+load_dotenv()
 
 # this is the location of the SuperTokens core.
 supertokens_config = SupertokensConfig(
