@@ -2,7 +2,7 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://fortress.vilet.tech",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,6 +16,7 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "recharts": "^2.12.7",
+    "supertokens-auth-react": "^0.47.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

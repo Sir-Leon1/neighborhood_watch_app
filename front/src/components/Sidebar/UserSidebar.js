@@ -3,7 +3,7 @@ import {Home, Users, Bell, Settings, LogOut, Menu, X, ShieldAlert} from 'lucide-
 import { signOut } from "supertokens-auth-react/recipe/session";
 import './styles/navbar.css';
 
-const Sidebar = () => {
+const UserSidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -27,7 +27,7 @@ const Sidebar = () => {
 
     const navItems = [
         {icon: Home, label: 'Home', link: '/'},
-        {icon: Users, label: 'Users', link: '/user-management'},
+        {icon: Users, label: 'Events', link: '/events'},
         {icon: Bell, label: 'Notifications', link: '/notifications'},
         {icon: Settings, label: 'Settings', link: '/settings'},
         {icon: ShieldAlert , label: 'Incidents', link: '/incidents'},
@@ -73,4 +73,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default UserSidebar;
