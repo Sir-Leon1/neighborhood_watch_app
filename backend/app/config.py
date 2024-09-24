@@ -1,3 +1,5 @@
+import os
+
 from supertokens_python.recipe import emailpassword, session, dashboard
 from supertokens_python import (
     InputAppInfo,
@@ -6,10 +8,12 @@ from supertokens_python import (
 
 # this is the location of the SuperTokens core.
 supertokens_config = SupertokensConfig(
-    connection_uri="https://try.supertokens.com")
+    connection_uri=os.getenv("SUPERTOKENS_CONNECTION_URI"),
+    api_key=os.getenv("SUPERTOKENS_API_KEY")
+)
 
 app_info = InputAppInfo(
-    app_name="Supertokens",
+    app_name="fortress",
     api_domain="http://localhost:3001",
     website_domain="http://localhost:3000",
 )
