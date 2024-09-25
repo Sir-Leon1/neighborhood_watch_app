@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortress - Your Neighborhood Watch App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="landing-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Fortress</div>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#" class="btn">Try Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Fortress</h1>
+        <p>Your Community, Your Safety, Our Priority</p>
+        <a href="#" class="btn">Get Started</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature">
+                <img src="/landing-page-Assets/NotificationsFeature.png" alt="Notifications">
+                <div class="feature-content">
+                    <h3>Get Notified</h3>
+                    <p>Stay informed with instant notifications about suspicious activities in your neighborhood. Timely information.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="/landing-page-Assets/app-logo.jpg" alt="Incident Notification">
+                <div class="feature-content">
+                    <h3>Incident Reporting</h3>
+                    <p>Connect with neighbors and local law enforcement through our secure, incident reporting platform. Share information and build a stronger, safer neighborhood.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="/landing-page-Assets/ContactsFeature.png" alt="Emergency Numbers">
+                <div class="feature-content">
+                    <h3>Emergency Numbers</h3>
+                    <p>In case of emergency, contact your nearest emergency officer or admin to report and alert on urgent issues, crimes in progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Fortress</h2>
+            <p>Fortress was born from a personal experience. After a series of break-ins in our neighborhood, we realized the need for a modern, tech-driven approach to community safety. What started as a simple group chat evolved into a comprehensive platform that empowers communities to look out for each other.</p>
+            <h3>Our Team</h3>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="/landing-page-Assets/Dev-Leon.jpg" alt="Gunnah Leon">
+                    <h4>Jane Doe</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/leon-gunnah-01a30a264/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Sir-Leon1"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/leon_agandi"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p>Check out our <a href="https://github.com/Sir-Leon1/neighborhood_watch_app.git">GitHub repository</a> for more information about the project.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fortress. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation for header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        // Scroll animation for features
+        const features = document.querySelectorAll('.feature');
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        features.forEach(feature => {
+            observer.observe(feature);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
