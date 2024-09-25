@@ -4,7 +4,7 @@ import Session from "supertokens-auth-react/recipe/session";
 
 export function getApiDomain() {
     const apiPort = process.env.REACT_APP_API_PORT || 5000;
-    const apiUrl = process.env.REACT_APP_API_URL || `http://fortress.vilet.tech/api`;
+    const apiUrl = process.env.REACT_APP_API_URL || `https://fortress.vilet.tech/api`;
     return apiUrl;
 }
 
