@@ -9,8 +9,9 @@ import IncidentReportPage from "./components/Incidents/ReportIncident";
 
 
 function AppRoutes() {
+    const basename = '/front';
     return (
-        <Router>
+        <Router basename={basename}>
             <Layout>
                 <Routes>
                     <Route path='/' element={<AdminDashboard/>}/>
