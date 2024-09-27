@@ -35,7 +35,7 @@ Middleware(app)
 CORS(
     app=app,
     supports_credentials=True,
-    origins="http://localhost:3000",
+    origins=["http://localhost:3000", "https://fortress.vilet.tech"],
     allow_headers=["Content-Type"] + get_all_cors_headers(),
 )
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')

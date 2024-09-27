@@ -20,7 +20,7 @@ supertokens_config = SupertokensConfig(
 
 app_info = InputAppInfo(
     app_name="fortress",
-    api_domain="http://localhost:3001",
+    api_domain="https://fortress.vilet.tech",
     website_domain="http://localhost:3000",
 )
 

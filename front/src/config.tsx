@@ -10,14 +10,14 @@ export function getApiDomain() {
 
 export function getWebsiteDomain() {
     const websitePort = process.env.REACT_APP_WEBSITE_PORT || 3000;
-    const websiteUrl = process.env.REACT_APP_WEBSITE_URL || `https://fortress.vilet.tech/front`;
+    const websiteUrl = process.env.REACT_APP_WEBSITE_URL || `http://localhost:${websitePort}`;
     return websiteUrl;
 }
 
 
 export const SuperTokensConfig = {
     appInfo: {
-        appName: "fortress",
+        appName: "SuperTokens Demo App",
         apiDomain: getApiDomain(),
         websiteDomain: getWebsiteDomain(),
     },
