@@ -14,12 +14,12 @@ function AppRoutes() {
         <Router basename={basename}>
             <Layout>
                 <Routes>
-                    <Route path='/' element={<AdminDashboard/>}/>
-                    <Route path='/incidents' element={<IncidentList/>}/>
-                    <Route path='/user-management' element={<UsersList/>}/>
-                    <Route path='/notifications' element={<NotificationList/>}/>
-                    <Route path='/userdashboard' element={<UserDashboard/>}/>
-                    <Route path='/report' element={<IncidentReportPage/>}/>
+                    <Route path='front/' element={<AdminDashboard/>}/>
+                    <Route path='front/incidents' element={<IncidentList/>}/>
+                    <Route path='front/user-management' element={<UsersList/>}/>
+                    <Route path='front/notifications' element={<NotificationList/>}/>
+                    <Route path='front/userdashboard' element={<UserDashboard/>}/>
+                    <Route path='front/report' element={<IncidentReportPage/>}/>
                 </Routes>
             </Layout >
         </Router>
