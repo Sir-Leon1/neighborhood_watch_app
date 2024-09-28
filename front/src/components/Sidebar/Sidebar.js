@@ -36,7 +36,7 @@ const Sidebar = () => {
     return (
         <div className={`dashboard ${isMobile ? 'mobile' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="dashboard-header">
-                <img src='/assets/app-logo.jpg' alt="App Logo" className="app-logo"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/app-logo.jpg`} alt="App Logo" className="app-logo"/>
                 {isMobile && (
                     <button className="toggle-btn" onClick={toggleDashboard}>
                         {isCollapsed ? <Menu size={24}/> : <X size={24}/>}
@@ -48,10 +48,10 @@ const Sidebar = () => {
                 <ul>
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.link} className="nav-link">
+                            <Link to={item.link} className="nav-link">
                                 <item.icon size={24}/>
                                 <span>{item.label}</span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
