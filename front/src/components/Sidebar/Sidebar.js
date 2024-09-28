@@ -26,11 +26,11 @@ const Sidebar = () => {
     };
 
     const navItems = [
-        {icon: Home, label: 'Home', link: '/front/'},
-        {icon: Users, label: 'Users', link: '/front/user-management'},
-        {icon: Bell, label: 'Notifications', link: '/front/notifications'},
-        {icon: Settings, label: 'Settings', link: '/front/settings'},
-        {icon: ShieldAlert , label: 'Incidents', link: '/front/incidents'},
+        {icon: Home, label: 'Home', link: '/'},
+        {icon: Users, label: 'Users', link: '/user-management'},
+        {icon: Bell, label: 'Notifications', link: '/notifications'},
+        {icon: Settings, label: 'Settings', link: '/settings'},
+        {icon: ShieldAlert , label: 'Incidents', link: '/incidents'},
     ];
 
     return (
