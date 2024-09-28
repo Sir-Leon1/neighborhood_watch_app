@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Home, Users, Bell, Settings, LogOut, Menu, X, ShieldAlert} from 'lucide-react';
 import './styles/navbar.css';
-import {Link} from "react-router-dom";
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(true);
@@ -36,7 +35,7 @@ const Sidebar = () => {
     return (
         <div className={`dashboard ${isMobile ? 'mobile' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="dashboard-header">
-                <img src={`${process.env.PUBLIC_URL}/assets/app-logo.jpg`} alt="App Logo" className="app-logo"/>
+                <img src='/assets/app-logo.jpg' alt="App Logo" className="app-logo"/>
                 {isMobile && (
                     <button className="toggle-btn" onClick={toggleDashboard}>
                         {isCollapsed ? <Menu size={24}/> : <X size={24}/>}
@@ -48,17 +47,17 @@ const Sidebar = () => {
                 <ul>
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <Link to={item.link} className="nav-link">
+                            <a href={item.link} className="nav-link">
                                 <item.icon size={24}/>
                                 <span>{item.label}</span>
-                            </Link>
+                            </a>
                         </li>
                     ))}
                 </ul>
             </nav>
 
             <div className="dashboard-profile">
-                <img src={`${process.env.PUBLIC_URL}/assets/user.jpg`} alt="User Profile" className="profile-photo"/>
+                <img src="/assets/user.jpg" alt="User Profile" className="profile-photo"/>
                 <button className="logout-btn">
                     <LogOut size={24}/>
                     <span>Logout</span>
