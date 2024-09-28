@@ -10,7 +10,7 @@ import IncidentReportPage from "./components/Incidents/ReportIncident";
 
 function AppRoutes() {
     return (
-        <Router basename="/front">
+        <Router>
             <Layout>
                 <Routes>
                     <Route path='/' element={<AdminDashboard/>}/>

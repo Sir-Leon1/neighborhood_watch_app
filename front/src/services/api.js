@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://fortressAPI.vilet.tech/api';
+const API_URL = 'https://fortressapi.vilet.tech/api';
 
 export const fetchIncidents = async () => {
     try {
