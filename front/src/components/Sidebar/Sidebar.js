@@ -26,11 +26,11 @@ const Sidebar = () => {
     };
 
     const navItems = [
-        {icon: Home, label: 'Home', link: '/'},
-        {icon: Users, label: 'Users', link: '/user-management'},
-        {icon: Bell, label: 'Notifications', link: '/notifications'},
-        {icon: Settings, label: 'Settings', link: '/settings'},
-        {icon: ShieldAlert , label: 'Incidents', link: '/incidents'},
+        {icon: Home, label: 'Home', link: '/front/'},
+        {icon: Users, label: 'Users', link: '/front/user-management'},
+        {icon: Bell, label: 'Notifications', link: '/front/notifications'},
+        {icon: Settings, label: 'Settings', link: '/front/settings'},
+        {icon: ShieldAlert , label: 'Incidents', link: '/front/incidents'},
     ];
 
     return (
@@ -48,17 +48,17 @@ const Sidebar = () => {
                 <ul>
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <Link to={item.link} className="nav-link">
+                            <a href={item.link} className="nav-link">
                                 <item.icon size={24}/>
                                 <span>{item.label}</span>
-                            </Link>
+                            </a>
                         </li>
                     ))}
                 </ul>
             </nav>
 
             <div className="dashboard-profile">
-                <img src="/assets/user.jpg" alt="User Profile" className="profile-photo"/>
+                <img src={`${process.env.PUBLIC_URL}/assets/user.jpg`} alt="User Profile" className="profile-photo"/>
                 <button className="logout-btn">
                     <LogOut size={24}/>
                     <span>Logout</span>
