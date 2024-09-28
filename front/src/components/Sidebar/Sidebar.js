@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Home, Users, Bell, Settings, LogOut, Menu, X, ShieldAlert} from 'lucide-react';
 import './styles/navbar.css';
+import {Link} from "react-router-dom";
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(true);
@@ -47,10 +48,10 @@ const Sidebar = () => {
                 <ul>
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.link} className="nav-link">
+                            <Link to={item.link} className="nav-link">
                                 <item.icon size={24}/>
                                 <span>{item.label}</span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
