@@ -23,7 +23,7 @@ function Users() {
                     className="search-input"
                 />
             </div>
-            <div className="activity-card">
+            <div className="activity-card-table">
                 <div className="table-scrollable">
                     <table className="users-table">
                         <thead>

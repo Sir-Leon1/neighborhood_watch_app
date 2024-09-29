@@ -34,6 +34,7 @@ app = Flask(__name__)
 Middleware(app)
 CORS(
     app=app,
+    resources={r"/api/": {"origins": "https://fortressapi.vilet.tech"}},
     supports_credentials=True,
     origins=["http://localhost:3000", "https://fortress.vilet.tech"],
     allow_headers=["Content-Type"] + get_all_cors_headers(),

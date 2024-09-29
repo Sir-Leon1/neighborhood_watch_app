@@ -36,6 +36,7 @@ h1 {
 }
 
 .notification-title {
+    color: #303030;
     font-size: 18px;
     font-weight: bold;
     display: flex;
