@@ -24,7 +24,7 @@ export const fetchUsers = async () => {
 
 export const fetchNotifs = async () => {
     try {
-        const response = await axios.get(`${API_URL}/notifications`);
+        const response = await axios.get(`${API_URL}/incidents/notifications`);
         return response.data;
     } catch (error) {
         console.error('Error fetching notifications:', error);
