@@ -3,7 +3,6 @@ import './styles/management_cards.css';
 import './styles/admin_dash.css';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Bell } from 'lucide-react';
-import {Link} from "react-router-dom";
 
 const data = [
   { name: 'Mon', incidents: 4 },
@@ -31,9 +30,9 @@ const ActivityCard = ({ title, activities, icon }) => (
 
 const ManagementCard = ({ icon, title, link }) => (
     <div className="management">
-      <Link to={link} className="management-card">
+      <a href={link} className="management-card">
         <div className="icon">{icon}</div>
-      </Link>
+      </a>
       <h2>{title}</h2>
     </div>
 );
