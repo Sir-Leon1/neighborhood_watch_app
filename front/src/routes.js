@@ -6,6 +6,7 @@ import NotificationList from "./pages/Notifications";
 import Layout from './pages/Layout';
 import UserDashboard from "./components/Dashboard/UserDashboard";
 import IncidentReportPage from "./components/Incidents/ReportIncident";
+import LoginReg from "./pages/LoginReg";
 
 
 function AppRoutes() {
@@ -13,6 +14,7 @@ function AppRoutes() {
         <Router>
             <Layout>
                 <Routes>
+                    <Route path='/loginreg' element={<LoginReg/>}/>
                     <Route path='/' element={<AdminDashboard/>}/>
                     <Route path='/incidents' element={<IncidentList/>}/>
                     <Route path='/user-management' element={<UsersList/>}/>
