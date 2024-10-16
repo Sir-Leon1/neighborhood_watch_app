@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { AlertCircle, Moon, Sun, Eye, EyeOff } from 'lucide-react';
+import {useAuth} from "./AuthContext";
 
 const LoginRegistrationPage = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState('');
   const [darkMode, setDarkMode] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { login } = useAuth();
+
 
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);
@@ -13,7 +18,12 @@ const LoginRegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError('This is a demo. No actual login/registration will occur.');
+    if (isLogin) {
+      login(email, password)
+    }
+    else {
+      // Handle registration
+    }
   };
 
   const toggleForm = () => {
@@ -66,6 +76,7 @@ const LoginRegistrationPage = () => {
               autoComplete="email"
               required
               placeholder="Email address"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="form-group">
@@ -78,6 +89,7 @@ const LoginRegistrationPage = () => {
                 autoComplete="current-password"
                 required
                 placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
               <button
                 type="button"

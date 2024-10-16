@@ -11,12 +11,17 @@ from backend.app.models import storage
 import os
 from dotenv import load_dotenv
 import logging
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from flask_bcrypt import Bcrypt
 
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/": {"origins": "https://fortressapi.vilet.tech"}})
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET')
+jwt = JWTManager(app)
+bcrypt = Bcrypt(app)
 
 
 logging.basicConfig(level=logging.INFO)

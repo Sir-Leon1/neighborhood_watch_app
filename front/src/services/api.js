@@ -32,14 +32,15 @@ export const fetchNotifs = async () => {
     }
 }
 
-export const login = async (email, password) => {
+export const loginApi = async (email, password) => {
     try {
-        const response = await fetch( '${API_URL}/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password }),
+        const response = await axios.post(`${API_URL}/users/login`, {
+            email,
+            password
+        }, {
+            headers: {'Content-Type': 'application/json'},
         });
-        return response.data;
+        return response;
     } catch (error) {
         console.error('Error logging in:', error);
         throw error;

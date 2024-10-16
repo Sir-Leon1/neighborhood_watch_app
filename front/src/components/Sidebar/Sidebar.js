@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {Home, Users, Bell, Settings, LogOut, Menu, X, ShieldAlert} from 'lucide-react';
 import './styles/navbar.css';
+import {useAuth} from "../Auth/AuthContext";
 
 const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
+    const { logout } = useAuth();
 
     useEffect(() => {
         const handleResize = () => {
@@ -32,6 +34,7 @@ const Sidebar = () => {
         {icon: ShieldAlert , label: 'Incidents', link: '/incidents'},
     ];
 
+
     return (
         <div className={`dashboard ${isMobile ? 'mobile' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="dashboard-header">
@@ -58,7 +61,7 @@ const Sidebar = () => {
 
             <div className="dashboard-profile">
                 <img src="/assets/user.jpg" alt="User Profile" className="profile-photo"/>
-                <button className="logout-btn">
+                <button className="logout-btn" onClick={logout}>
                     <LogOut size={24}/>
                     <span>Logout</span>
                 </button>
