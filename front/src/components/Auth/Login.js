@@ -315,6 +315,8 @@ const styles = `
   }
 `;
 
+
+//TODO: Seperate css and js into seperate files
 const styleElement = document.createElement('style');
 styleElement.textContent = styles;
 document.head.appendChild(styleElement);
